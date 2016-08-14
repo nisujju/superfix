@@ -1,0 +1,182 @@
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Indore Home Services</h1>
+            <h3>Best home services available in Indore</h3>
+            <br>
+             <% if !logged_in? %>
+                <%= link_to "Sign up", signup_path, class: "btn btn-dark btn-lg" %>
+
+                <%= link_to "Log In", login_path, class: "btn btn-light btn-lg" %>
+              <%else%>
+                 <a href="#about" class="btn btn-light btn-lg">Enjoy Our Services</a>
+              <% end %>
+        </div>
+    </header>
+
+<!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Electrical, plumbing, appliance and computer one stop solution.</h2>
+                    <p class="lead">If you have issue with any of them above than don't worry. We are here to serve you better and best of its class.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Service List</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-plug fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Electrical</strong>
+                                </h4>
+                                <p>Any issue with electric wire, switch, fuse etc. Dont worry book our service.</p>
+                                <a href="/requests/new" target="_blank" class="btn btn-light">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-laptop fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>PC &amp; Laptops</strong>
+                                </h4>
+                                <p>Any hardware or software issue? Please give us chance to help you.</p>
+                                <a href="/requests/new" target="_blank" class="btn btn-light">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-tachometer fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Home Appliances</strong>
+                                </h4>
+                                <p>We deal with variety of appliances such as fridge, TV, AC, cooler and many more.</p>
+                                <a href="/requests/new" target="_blank" class="btn btn-light">Book Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cogs fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Plumbing</strong>
+                                </h4>
+                                <p>Any plumbing or sanitary causing worry for you? You just got to right place.</p>
+                                <a href="/requests/new" target="_blank" class="btn btn-light">Book Now</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <aside class="callout">
+        <div class="text-vertical-center">
+        
+  	     	<div class="block-head text-center">
+  				<h2 class="font-medium margin-muted">How it works</h2><span></span>
+  			</div>
+  			<div class="row">
+  				<div class="col-md-12 col-md-offset-0 col-sm-11 col-sm-offset-1">
+  				<div class="col-md-2 col-sm-12 text-center"></div>
+  				<div class="col-md-2 col-sm-3 text-center">
+                            <%= image_tag "book1.png", width: "50" %>
+                            <h4 class="font-medium">Book</h4>
+                            Share your need and information with us.
+				</div>
+				<div class="col-md-1 col-sm-1 text-center"></div>
+				<div class="col-md-2 col-sm-3 text-center">
+                            <%= image_tag "schedule1.png", width: "50" %>               
+                            <h4 class="font-medium">Schedule</h4>
+                            Schedule a time for us to attend to you.
+				</div>
+				<div class="col-md-1 col-sm-1 text-center"></div>
+				<div class="col-md-2 col-sm-3 text-center">
+                            <%= image_tag "relax1.png", width: "50" %>
+                            <h4 class="font-medium">Relax</h4>
+                            Our expert team will do the assigned task while you relax.
+				</div>
+				<div class="col-md-2 col-sm-12 text-center"></div>
+			</div>
+
+        </div>
+    </aside>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Our Work</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <%= image_tag "portfolio-1.jpg", class: "img-portfolio img-responsive" %> 
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+								<%= image_tag "portfolio-2.jpg", class: "img-portfolio img-responsive" %> 
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+								<%= image_tag "portfolio-3.jpg", class: "img-portfolio img-responsive" %>                                 
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+								<%= image_tag "portfolio-4.jpg", class: "img-portfolio img-responsive" %>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>Need any help? Please let us know.</h3>
+                     <%= link_to "Contact Us", contact_path, class: "btn btn-lg btn-light" %>
+                </div>
+            </div>
+        </div>
+    </aside>

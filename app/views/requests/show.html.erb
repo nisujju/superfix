@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 alert alert-success marg-top-45">
+  		<div class="row">
+    		<div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 text-center">
+      			<span class="glyphicon glyphicon-ok-sign" style="font-size:55px;"></span>
+    		</div>
+    		<div class="col-lg-11 col-md-12 col-sm-12 col-xs-12">
+      			<div>
+        			Dear Customer, Thank you for booking an order. Please find your request details below. We will send you the service provider details soon
+      			</div>
+     <!--  -->
+    		</div>
+  		</div>
+	</div>
+	<table style="background-color:#fff;" class="table table-bordered table-striped" id="view-job-table">
+		<tbody>
+        	<tr>
+    			<td style="font-size:13px;">
+
+        			<label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft">Email Id:</label>
+    			</td>
+  			    <td style="font-size:13px;">
+					<label style="font-weight:normal;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft"><%= @request.email %></label>
+    			</td>
+  			</tr>
+            <tr>
+    			<td style="font-size:13px;">
+        			<label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft">Request Type:</label>
+    			</td>
+    			<td style="font-size:13px;">
+					<label style="font-weight:normal;word-break: break-word;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft"><%= @request.request_type %></label>
+    			</td>
+			</tr>
+  			<tr>
+    			<td style="font-size:13px;">
+        			<label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft">Phone:</label>
+    			</td>
+    			<td style="font-size:13px;">
+					<label style="font-weight:normal;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft"><%= @request.phone %></label>
+    			</td>
+  			</tr>
+  			<tr>
+    			<td style="font-size:13px;">
+        			<label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft">Schedule Date:</label>
+    			</td>
+    			<td style="font-size:13px;">
+					<label style="font-weight:normal;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft"><%= @request.day %></label>
+    			</td>
+  			</tr>
+      		<tr>
+    			<td style="font-size:13px;">
+        			<label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft">Time:</label>
+    			</td>
+    			<td style="font-size:13px;">
+					<label style="font-weight:normal;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label txt-lft"><%= @request.time %></label>
+    			</td>
+  			</tr>
+		</tbody>
+	</table>
+ </div>
+</div>
