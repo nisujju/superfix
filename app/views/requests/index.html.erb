@@ -7,7 +7,8 @@
   <thead>
     <tr>
       <th>#</th>
-      <th>Email Id</th>
+      <th>Name</th>
+      <th>Email</th>
       <th>Request Type</th>
       <th>Phone Number</th>
       <th>Schedule Date</th>
@@ -19,11 +20,12 @@
   <tbody>
   	 <tr>
   	 	<th scope="row"><%=request.id%></th>
-  	    <td><%= request.email %></td>
+  	    <td><%= request.name %></td>
+        <td><%= request.email %></td>
   	    <td><%= request.request_type %></td>
   	    <td><%= request.phone %></td>
   	    <td><%= request.day %></td>
-  	    <td><%= request.time %></td>
+  	    <td><%= request.time.strftime("%I:%M%p") %></td>
   	    <td> <%= link_to "delete", request, method: :delete,
                                   data: { confirm: "You sure?" } %> </td>
       </tr>

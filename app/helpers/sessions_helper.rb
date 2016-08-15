@@ -48,10 +48,4 @@ module SessionsHelper
     @current_user = nil
   end
 
-  #Returns true if request email id mathes login id
-  def check_email(email)
-    #@present_user = User.find_by(id: user_id)
-    email == current_user.email
-  end
-
 end

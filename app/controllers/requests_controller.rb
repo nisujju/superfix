@@ -1,6 +1,6 @@
 class RequestsController < ApplicationController
 before_action :admin_user,     only: [:destroy, :index]
-
+#before_action :assign_email,   only: [:create]
   def new
   	@request=Request.new
     if !logged_in?
@@ -11,28 +11,23 @@ before_action :admin_user,     only: [:destroy, :index]
 
   def show
     @request = Request.find(params[:id])
-    if !check_email(@request.email)
-        flash[:danger] = "Entered email id does not match your login email id."
-        redirect_to root_url
+    if @request.email != current_user.email
+      flash[:danger] = "No Request Found"
+      redirect_to root_url
     end
   end
 
   def create
   	@request = Request.new(request_params)
-  if logged_in? && check_email(@request.email)
+    assign_email
+  if logged_in?
   	if @request.save
-      flash[:success] = "Your request have been successfully received. You will be contacted shortly."
       redirect_to @request
     else
     	render 'new'
     end
   else
-      if !check_email(@request.email)
-        flash[:danger] = "Entered email id does not match your login email id."
-      else    
-        flash[:danger] = "Please log in to continue."
-      end
-      render 'new'
+    flash[:danger] = "Please log in to continue."
   end
   end 
 
@@ -49,8 +44,8 @@ before_action :admin_user,     only: [:destroy, :index]
   private
 
     def request_params
-      params.require(:request).permit(:email, :request_type, :phone,
-                                   :day, :time)
+      params.require(:request).permit(:name, :request_type, :phone,
+                                   :day, :time, :email)
     end
 
     # Confirms an admin user.
@@ -58,4 +53,7 @@ before_action :admin_user,     only: [:destroy, :index]
       redirect_to(root_url) unless current_user.admin?
     end
 
+    def assign_email
+      @request.email = current_user.email
+    end
 end

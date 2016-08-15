@@ -8,8 +8,8 @@
     <%= form_for(@request) do |f| %>
       <%= render 'shared/request_error_messages' %>
 
-      <%= f.label :Email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.label :Name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :Request %>
       <%= f.select :request_type, grouped_options_for_select({'Electric' => ['Fans', 'Wiring', 'Switches, Meters or Fuses', 'Lights',         'Inverter', 'Other'],'Plumbing' => ['Tap, Basin or Sink','Toilet and Sanitary','Bathroom Fittings', 'Blocks and Leakeges', 'Water Tank', 'Pipes and Pumps', 'Others'], 'Appliance repair' => ['AC', 'Refrigerator', 'Washing Machine', 'Microwave', 'TV', 'Geyser'], 'Computer' => ['Hardware', 'Software', 'Printer', 'Network']}), include_blank: false, prompt: "Select Request", class: 'form-control' %>
@@ -18,7 +18,7 @@
       <%= f.telephone_field :phone, class: 'form-control' %>
 
       <%= f.label :Select_Date %>
-      <%= f.date_field :day, class: 'form-control' %>
+      <%= f.date_field :day, class: 'form-control', min: Date.today, max: 1.month.from_now %>
 
       <%= f.label :Select_Time %>
       <%= f.time_field :time, class: 'form-control' %>
