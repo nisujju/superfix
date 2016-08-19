@@ -44,7 +44,7 @@ before_action :admin_user,     only: [:destroy, :index]
   private
 
     def request_params
-      params.require(:request).permit(:name, :request_type, :phone,
+      params.require(:request).permit(:name, :request_type, :user_address, :phone,
                                    :day, :time, :email)
     end
 

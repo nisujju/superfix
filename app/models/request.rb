@@ -4,5 +4,6 @@ class Request < ActiveRecord::Base
   validates :phone, presence: true, length: { minimum: 10 }
   validates :day, presence: true
   validates :time, presence: true
+  validates :user_address, presence: true, length: { maximum: 50 }
 end
 
