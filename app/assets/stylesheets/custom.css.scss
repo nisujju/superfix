@@ -508,9 +508,7 @@ input {
   }
 
 .navbar-custom {
-    background-color:#1f030a;
-    color:#ffffff;
-    border-radius:0;
+    background-color:#428bca;
 }
 
 .block-head{
@@ -534,3 +532,13 @@ input {
     margin: 0px!important;
 }
 
+.navbar-toggle .icon-bar {
+  background-color :#F8F8FF;
+}
+
+    .head {
+    color: $color-white;
+    font-weight: bold; 
+    font-size: 1.5em;
+    font-style: oblique;
+  }
