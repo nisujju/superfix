@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield(:title) %> | Super Fix Home Services</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Best Home electrical, plumbing, computer, pc, laptop, refrigeraor, AC, fridge and other home appliances repair online service available in Indore.">
+  <meta name="keywords" content="online home repair service, home repair services, electric repair service, plumbing repair service, appliance repair service, AC repair service, fridge repair service, laptop repair service, PC repair service, hardware repair service.">
+  <meta name="author" content="">
+  <meta name="google-site-verification" content="hoAExJxtkhgjPVGbIOvyGDWQS-GijTWLJMz7La91SRc" />
+  <title><%= yield(:title) %> Electric Repair | Plumbing repair | PC Laptop repair | Appliance repair | Online Home Service Indore</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %> 
 </head>
   <body>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <%= render 'layouts/header' %> 
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
