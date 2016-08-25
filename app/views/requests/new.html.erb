@@ -12,7 +12,7 @@
       <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :Request %>
-      <%= f.select :request_type, grouped_options_for_select({'Electric' => ['Fans', 'Wiring', 'Switches, Meters or Fuses', 'Lights',         'Inverter', 'Other'],'Plumbing' => ['Tap, Basin or Sink','Toilet and Sanitary','Bathroom Fittings', 'Blocks and Leakeges', 'Water Tank', 'Pipes and Pumps', 'Others'], 'Appliance repair' => ['AC', 'Refrigerator', 'Washing Machine', 'Microwave', 'TV', 'Geyser'], 'Computer' => ['Hardware', 'Software', 'Printer', 'Network']}), include_blank: false, prompt: "Select Request", class: 'form-control' %>
+      <%= f.select :request_type, grouped_options_for_select({'Electric' => ['Fans', 'Wiring', 'Switches, Meters or Fuses', 'Lights',         'Inverter', 'Other'],'Plumbing' => ['Tap, Basin or Sink','Toilet and Sanitary','Bathroom Fittings', 'Blocks and Leakeges', 'Water Tank', 'Pipes and Pumps', 'Others'], 'Appliance repair' => ['AC', 'Cooler', 'Refrigerator', 'Washing Machine', 'Microwave', 'TV', 'Geyser', 'Other'], 'Computer' => ['Hardware', 'Software', 'Printer', 'Network']}), include_blank: false, prompt: "Select Request", class: 'form-control' %>
 
       <%= f.label :Address %>
       <%= f.text_field :user_address, class: 'form-control' %>
