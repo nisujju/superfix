@@ -1,28 +1,15 @@
-== README
+== Superfix App 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the repository for Superfix.in. It enables users to log in service requests across various service categories. Once service is logged the Admin of the app has the privilige to look into all the logged in requests sorted by the order of the logged in time and date. Then admin can respond accordingly.
 
-Things you may want to cover:
+Technical details about the application:
 
-* Ruby version
+* Ruby version 2.2.4 and rails version 4.2.5.1. PostgreSql as a database.
 
-* System dependencies
+* Responsive web design framework that enables app to be compatible to various device size using the power of bootstrap.
 
-* Configuration
+* Heroku cloud management configuration and deployement. Using PUMA server.
 
-* Database creation
+* Using modern web CSS3 and HTML5.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Authentication and autherization managed by enhanced cookie and sessions management. Leveraging the hash digest and encryption technique of Rails cookie storage and Bcrypt.
